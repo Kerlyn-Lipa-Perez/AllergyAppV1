@@ -1,9 +1,11 @@
-<ion-content>
+<ion-content >
   <app-header></app-header>
+  <br>
+  <br>
   <app-logo></app-logo>
   
-  <h2 class="ion-text-center ion-no-margin">Login</h2>
-  <div class="content">
+  <h2 class="ion-text-center ion-no-margin">Inicio de sesión</h2>
+  
     <div class="d-flex-center">
       <form (keyup.enter)=" submit()" (ngSubmit)="submit()" class="ion-text-center">
         <app-custom-input autocomplete="email" [control]="form.controls.email " type="email" label="Correo" icon="mail-outline"></app-custom-input>
@@ -39,8 +41,4 @@
       </form>
     </div>
 
-
-    
-    
-  </div>
 </ion-content>

@@ -13,12 +13,13 @@ import {AngularFireModule} from '@angular/fire/compat'
 import {AngularFireAuthModule} from '@angular/fire/compat/auth'
 import { environment } from 'src/environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore'
+import { setMode } from 'ionicons/dist/types/stencil-public-runtime';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule, 
-    IonicModule.forRoot(), 
+    IonicModule.forRoot( {mode:'md'}), 
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule

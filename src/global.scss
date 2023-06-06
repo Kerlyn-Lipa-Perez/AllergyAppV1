@@ -27,14 +27,14 @@
 
 
 ion-content {
-    --background: var(--ion-color-primary);
-    --color: var(--ion-color-primary-contrast);
-  }
+    --background: #13944B;
+    --color: #ffff;
+}
 .content {
     width: 100%;
     height: 88vh;
-    background: var(--ion-color-ligth);
-    color: var(--ion-color-ligth-contrast);
+    background:  #13944B;
+    color: #34E17F;
     border-radius: 20px 20px 0 0;
     margin-top: 5vh;
     box-shadow: -1px -10px 42px -18px rgba(0, 0, 0, 0.35);
@@ -53,9 +53,30 @@ h1{
 }
 ion-button{
   text-transform: capitalize;
+
 }
 .d-flex-center{
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+.add-update-modal{
+  --height: 95%;
+  --border-radius: 20px;
+}
+
+@media screen and (max-width: 768px){
+  .add-update-modal{
+    --height: 100%;
+    --border-radius: 0;
+  }
+}
+
+.empty{
+  opacity: 30%;
+  text-align: center;
+  ion-icon{
+    font-size: 130px;
+  }
 }

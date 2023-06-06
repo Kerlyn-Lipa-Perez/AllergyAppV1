@@ -1,14 +1,15 @@
 <ion-content>
   <app-header backButton="/auth"></app-header>
+  <br>
   <app-logo></app-logo>
   
   <h2 class="ion-text-center ion-no-margin">Nuevo Usuario</h2>
   <div class="content">
     <div class="d-flex-center">
+      
       <form (keyup.enter)=" submit()" (ngSubmit)="submit()" class="ion-text-center">
 
         <app-custom-input autocomplete="name" [control]="form.controls.name " type="text" label="Nombre" icon="person-outline"></app-custom-input>
-        
         <div class="validators" *ngIf="form.controls.name.errors && form.controls.name.dirty">
           <div *ngIf="form.controls.name.errors?.['required']">Ingresa tu nombre</div>
           <div *ngIf="form.controls.name.errors?.['minlength']">Ingresa un nombre valido</div>

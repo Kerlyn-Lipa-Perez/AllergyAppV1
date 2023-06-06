@@ -51,14 +51,16 @@ export class SignUpPage implements OnInit {
           email:res.user.email
         } 
         this.utilsSvc.setElementInLocalStorage('user',user)
-        this.utilsSvc.routerLink('/tabs')
+        this.utilsSvc.routerLink('/tabs/home')
 
         this.utilsSvc.dismissLoading();
         this.utilsSvc.presentToast({
-          message:'Bienvenido ${user.name}',
+          message:`Bienvenido ${user.name}`,
           duration:1500,
           icon:'person-outline'
         })
+
+        this.form.reset();
       },error =>{
         this.utilsSvc.dismissLoading();
         this.utilsSvc.presentToast({

@@ -4,9 +4,51 @@
         padding: 50px 10px;
     }
 }
+
+.ion-content {
+    background-color: #d6f5d6;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
 .sign-up{
     padding: 50px;
 }
-ion-button{
-    width: 170px;
-}
+
+ion-button {
+    --background: #34E17F;
+    --border-color:  #13944B;
+    --border-radius: 10px;
+    --padding-start: 1.5rem;
+    --padding-end: 1.5rem;
+    --padding-top: 0.5rem;
+    --padding-bottom: 0.5rem;
+    --ion-text-transform: capitalize;
+  }
+
+  
+  ion-button:disabled {
+    --background: #ccc;
+    --color: #fff;
+  }
+
+.custom-input {
+    --background: #fff;
+    --color: #000;
+    --border-radius: 10px;
+    --padding-start: 1.5rem;
+    --padding-end: 1.5rem;
+    --padding-top: 0.5rem;
+    --padding-bottom: 0.5rem;
+  }
+  
+  .validators {
+    color: red;
+    font-size: 0.8rem;
+  }
