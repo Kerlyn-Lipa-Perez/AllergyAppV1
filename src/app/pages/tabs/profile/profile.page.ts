@@ -26,7 +26,6 @@ export class ProfilePage implements OnInit {
 
   getUser(){
     return this.user = this.utilSvc.getElementFromLocalStorage('user')
-
   }
 
 

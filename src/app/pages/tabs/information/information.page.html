@@ -1,4 +1,36 @@
 <ion-content>
 
+    <app-header title="Informacion"></app-header>
+
+    <ion-grid>
+        <ion-row class="justify-content-end"> 
+            <ion-col  *ngFor="let alimento of alimentos" size-lg="6"  size-md="6" size-sm="12"   size="12"  >
+                <ion-card model="ios ">
+                    <h3 class="ion-margin title">{{alimento.title}}</h3>
+                    <p class="ion-margin">{{alimento.descripcion }}</p>
+                    <div class="ion-margin">
+                        <div>
+                            <h5>Tratamiento</h5>
+                            <p>{{alimento.tratamiento}}</p>
+                        </div>
+                        <div>
+                            <h5>Causas</h5>
+                            <p>{{alimento.causas}}</p>
+                        </div>
+                        <div>
+                            <h5>Prevención</h5>
+                            <p>{{alimento.prevencion}}</p>
+                        </div>
+                        <div>
+                            <h5>Consejos</h5>
+                            <p>{{alimento.consejosEstiloVida}}</p>
+                        </div>
+                    </div>
+                    
+                    
+                </ion-card>
+            </ion-col>        
+        </ion-row>
+    </ion-grid>
   
 </ion-content>

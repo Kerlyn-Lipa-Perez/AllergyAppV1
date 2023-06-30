@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'firebase/auth';
 import { alergias } from 'src/app/models/alergias.models';
+import { alimentos } from 'src/app/models/alimentos.models';
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { UtilsService } from 'src/app/services/utils.service';
 import { AddUpdateAlergiaComponent } from 'src/app/shared/components/add-update-alergia/add-update-alergia.component';
+import { AlimentosinformacionPage } from 'src/app/shared/components/alimentosinformacion/alimentosinformacion.component';
 
 @Component({
   selector: 'app-tabs',
@@ -13,6 +15,7 @@ import { AddUpdateAlergiaComponent } from 'src/app/shared/components/add-update-
 export class TabsPage implements OnInit {
 
   alergias:alergias[] = []
+  alimentos:alimentos[] = []
 
   constructor(    
     private firebaseSvc:FirebaseService,
@@ -28,6 +31,17 @@ export class TabsPage implements OnInit {
       cssClass:'add-update-modal'
     })
   }
+   abrirBoton(alimentos?:alimentos){
+    this.utilSvc.presentModal({
+      component:AlimentosinformacionPage,
+      componentProps: {alimentos},
+      cssClass:'alimentosinformacion'
+    })
+    
+  }
+
+
+
   getAlergias(){
     let users:User = this.utilSvc.getElementFromLocalStorage('user')
     let path= `users/${users.uid}`

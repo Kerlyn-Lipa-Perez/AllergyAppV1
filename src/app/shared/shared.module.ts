@@ -8,15 +8,18 @@ import { CustomInputComponent } from './components/custom-input/custom-input.com
 import { LogoComponent } from './components/logo/logo.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AddUpdateAlergiaComponent } from './components/add-update-alergia/add-update-alergia.component';
+import { AlimentosinformacionPage } from './components/alimentosinformacion/alimentosinformacion.component';
 
 @NgModule({
-  declarations: [HeaderComponent, CustomInputComponent, LogoComponent,AddUpdateAlergiaComponent,],
+  declarations: [HeaderComponent, CustomInputComponent, LogoComponent,AddUpdateAlergiaComponent,AlimentosinformacionPage],
   exports: [
     HeaderComponent,
     CustomInputComponent,
     LogoComponent,
     NgCircleProgressModule,
     AddUpdateAlergiaComponent,
+    AlimentosinformacionPage
+    
   ],
   imports: [
     CommonModule,

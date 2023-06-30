@@ -30,6 +30,12 @@ export class HomePage implements OnInit {
 
 
 
+  /**
+   * Esta función recupera el objeto de usuario del almacenamiento local mediante un servicio de
+   * utilidad.
+   * @returns el valor de `this.user`, al que se le asigna el valor de
+   * `this.utilSvc.getElementFromLocalStorage('user')`. El valor que se devuelve es un objeto que * representa a un usuario que se almacenó previamente en el almacenamiento local.
+   **/
   getUser(){
     return this.user = this.utilSvc.getElementFromLocalStorage('user')
 
@@ -69,6 +75,9 @@ export class HomePage implements OnInit {
     })
   }
 
+
+  /* `confirmDeleteAlergia` es una función que presenta una alerta al usuario preguntándole si desea eliminar una alergia. Si el usuario selecciona "Si, eliminar" (Yes, delete), la función llama a `deleteAlergia` para eliminar la alergia de Firebase. Si el usuario selecciona "Cancelar"
+  (Cancelar), la alerta se descarta y no pasa nada. */
 
   confirmDeleteAlergia(alergia:alergias){
     this.utilSvc.presentAlert({

@@ -28,6 +28,10 @@ export class AddUpdateAlergiaComponent implements OnInit {
     private utilSvc:UtilsService
   ) { }
 
+  /**
+   * La función ngOnInit establece el valor de un formulario en función de una entrada de usuario
+   * almacenada.
+   */
   ngOnInit() {
     this.user = this.utilSvc.getElementFromLocalStorage('user')
 

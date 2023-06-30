@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InformationPageRoutingModule } from './information-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { InformationPage } from './information.page';
+import { AlimentosinformacionPage } from 'src/app/shared/components/alimentosinformacion/alimentosinformacion.component';
 
 @NgModule({
   imports: [

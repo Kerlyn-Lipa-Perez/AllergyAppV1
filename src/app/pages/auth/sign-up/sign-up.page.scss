@@ -10,3 +10,15 @@
 ion-button{
     width: 170px;
 }
+ion-button {
+    --background: #34E17F;
+    --border-color:  #13944B;
+    --border-radius: 10px;
+    --padding-start: 1.5rem;
+    --padding-end: 1.5rem;
+    --padding-top: 0.5rem;
+    --padding-bottom: 0.5rem;
+    --ion-text-transform: capitalize;
+  }
+
+  
